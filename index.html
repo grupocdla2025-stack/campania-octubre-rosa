@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaña Octubre Rosa 💗</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=CDLA"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ABCDE12345');
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Visor del PDF -->
+  <iframe src="Octubre rosa - Carusel_compressed (1).pdf#view=FitH" allowfullscreen></iframe>
+
+  <script>
+    // Inicia medición del tiempo de permanencia
+    let startTime = Date.now();
+
+    window.addEventListener("beforeunload", () => {
+      let duration = Math.round((Date.now() - startTime) / 1000); // en segundos
+      gtag('event', 'tiempo_lectura', {
+        'event_category': 'Campaña Octubre Rosa',
+        'event_label': 'Visor PDF',
+        'value': duration
+      });
+    });
+  </script>
+</body>
+</html>
