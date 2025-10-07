@@ -20,7 +20,7 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      background-color: #f9f9f9;
+      background-color: #fdf6f8;
       font-family: Arial, sans-serif;
     }
     header {
@@ -44,15 +44,17 @@
     💗 Campaña Octubre Rosa – Clínica de las Américas 💗
   </header>
 
-  <!-- Visor del PDF -->
-  <iframe src="Octubre%20rosa%20-%20Carusel_compressed%20(1).pdf#view=FitH" allowfullscreen></iframe>
+  <!-- Visor de PDF compatible con móviles -->
+  <iframe 
+    src="https://docs.google.com/gview?embedded=true&url=https://grupocdla2025-stack.github.io/campania-octubre-rosa/Octubre%20rosa%20-%20Carusel_compressed%20(1).pdf" 
+    allowfullscreen>
+  </iframe>
 
   <script>
-    // Mide tiempo de permanencia en la página
+    // Mide el tiempo de permanencia
     let startTime = Date.now();
-
     window.addEventListener("beforeunload", () => {
-      let duration = Math.round((Date.now() - startTime) / 1000); // segundos
+      let duration = Math.round((Date.now() - startTime) / 1000);
       gtag('event', 'tiempo_lectura', {
         'event_category': 'Campaña Octubre Rosa',
         'event_label': 'Visor PDF',
